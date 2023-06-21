@@ -4,20 +4,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using GerenciamentoDeBiblioteca.Domain.Entities;
+using System.IO;
 
 namespace GerenciamentoDeBiblioteca.Data.Repositories
 {
     public class DataContext : DbContext
     {
+        public string DbPath { get; }
         public DbSet<Livro> Livros { get; set; }
         public DbSet<Autor> Autores { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
+
+
+        public DataContext()
+        {
+            string path = Directory.GetCurrentDirectory();
+            DbPath = Path.Combine(path, "Biblioteca.db");
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Configure a conexão com o banco de dados
-            optionsBuilder.UseSqlServer("sua-string-de-conexao");
+            optionsBuilder.UseSqlite($"Data Source={DbPath}");
         }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
