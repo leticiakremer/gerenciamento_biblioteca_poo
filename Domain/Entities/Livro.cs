@@ -12,5 +12,6 @@ namespace GerenciamentoDeBiblioteca.Domain.Entities
         public string Titulo { get; set; }
         public List<Autor> Autores { get; set; }
         public List<Usuario> UsuariosEmprestimos { get; set; }
+        public object UsuariosEmprestimo { get; internal set; }
     }
 }
