@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zlP0tjWKygypYCAzsdYBMJYmnq3q0EkWopUqFq2TFQ3bJ+RZrvgmlq+P8kNlEA1Dk1V9GOD18VrcVkxTI/R5xQ==",
+  "dgSpecHash": "S5F41YsmNBKc5HrHKh0piW4iGYRTetYGL2+rVuYyAbAuKyTWElZ+BthOwHrfEkn/JOREYq1wYlMeMGzrPJR9eA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
+  "projectFilePath": "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nessa\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\nessa\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",

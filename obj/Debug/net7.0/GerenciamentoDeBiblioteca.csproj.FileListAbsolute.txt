@@ -34,3 +34,13 @@ C:\Users\GerenciamentoDeBiblioteca\obj\Debug\net7.0\refint\GerenciamentoDeBiblio
 C:\Users\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.pdb
 C:\Users\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.genruntimeconfig.cache
 C:\Users\GerenciamentoDeBiblioteca\obj\Debug\net7.0\ref\GerenciamentoDeBiblioteca.dll
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.csproj.AssemblyReference.cache
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.AssemblyInfoInputs.cache
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.AssemblyInfo.cs
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.csproj.CoreCompileInputs.cache
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.dll
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\refint\GerenciamentoDeBiblioteca.dll
+C:\Users\ASPOO\GerenciamentoDeBiblioteca\obj\Debug\net7.0\GerenciamentoDeBiblioteca.pdb

@@ -9,22 +9,22 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
 {
     public class LivroRepository
     {
-        private readonly DbContext context;
+        private readonly DbContext _context;
 
         public LivroRepository(DbContext dbContext)
         {
-            context = dbContext;
+            _context = dbContext;
         }
 
         public void AddLivro(Livro livro)
         {
-            context.Set<Livro>().Add(livro);
-            context.SaveChanges();
+            _context.Set<Livro>().Add(livro);
+            _context.SaveChanges();
         }
 
         public Livro GetLivroById(int livroId)
         {
-            return context.Set<Livro>().Find(livroId);
+            return _context.Set<Livro>().Find(livroId);
         }
     }
 }

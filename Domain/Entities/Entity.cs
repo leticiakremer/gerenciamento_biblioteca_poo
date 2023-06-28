@@ -5,11 +5,8 @@ using System.Threading.Tasks;
 
 namespace GerenciamentoDeBiblioteca.Domain.Entities
 {
-    public class Autor
+    public class Entity
     {
-        public string Nome { get; set; }
-        public List<Livro> Livros { get; set; }
-
-
+        public int Id { get; set; }
     }
 }

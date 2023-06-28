@@ -9,22 +9,22 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
 {
     public class UsuarioRepository
     {
-        private readonly DbContext context;
+        private readonly DbContext _context;
 
-        public UsuarioRepository(DbContext dbContext)
+        public UsuarioRepository(DbContext context)
         {
-            context = dbContext;
+            _context = context;
         }
 
         public void AddUsuario(Usuario usuario)
         {
-            context.Set<Usuario>().Add(usuario);
-            context.SaveChanges();
+            _context.Set<Usuario>().Add(usuario);
+            _context.SaveChanges();
         }
 
         public Usuario GetUsuarioById(int usuarioId)
         {
-            return context.Set<Usuario>().Find(usuarioId);
+            return _context.Set<Usuario>().Find(usuarioId);
         }
     }
 }

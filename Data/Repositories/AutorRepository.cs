@@ -2,29 +2,50 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GerenciamentoDeBiblioteca.Data.Context;
 using GerenciamentoDeBiblioteca.Domain.Entities;
+using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+
+
 
 namespace GerenciamentoDeBiblioteca.Data.Repositories
 {
-    public class AutorRepository
+    public class AutorRepository : IAutorRepository
     {
-        private readonly DbContext context;
+        private readonly DbContext _context;
 
-        public AutorRepository(DbContext dbContext)
+        public AutorRepository(DbContext context)
         {
-            context = dbContext;
+            _context = context;
+        }
+
+        public IList<Autor> GetAllAuthors()
+        {
+            return _context.Autores.ToList();
+        }
+
+        public Autor GetAuthorById(int id)
+        {
+            return _context.Autores.Find(id);
         }
 
         public void AddAutor(Autor autor)
         {
-            context.Set<Autor>().Add(autor);
-            context.SaveChanges();
+            _context.Autores.Add(autor);
+            _context.SaveChanges();
         }
 
-        public Autor GetAutorById(int autorId)
+        public void UpdateAutor(Autor autor)
         {
-            return context.Set<Autor>().Find(autorId);
+            _context.Autores.Update(autor);
+            _context.SaveChanges();
+        }
+
+        public void DeleteAutor(Autor autor)
+        {
+            _context.Autores.Remove(autor);
+            _context.SaveChanges();
         }
     }
 }
