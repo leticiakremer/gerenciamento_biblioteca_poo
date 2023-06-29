@@ -4,6 +4,7 @@ using GerenciamentoDeBiblioteca.Domain.Entities;
 using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using GerenciamentoDeBiblioteca.Domain.DTOs;
 using GerenciamentoDeBiblioteca.Domain.ViewModels;
+using GerenciamentoDeBiblioteca.Data.Repositories;
 
 namespace GerenciamentoDeBiblioteca.Controllers
 {

@@ -2,6 +2,7 @@
 using GerenciamentoDeBiblioteca.Domain.Entities;
 using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using GerenciamentoDeBiblioteca.Data.Context;
 
 
 
