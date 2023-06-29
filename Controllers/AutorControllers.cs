@@ -1,14 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GerenciamentoDeBiblioteca.Domain.Entities;
 using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using GerenciamentoDeBiblioteca.Domain.DTOs;
 using GerenciamentoDeBiblioteca.Domain.ViewModels;
 using AutoMapper;
-using GerenciamentoDeBiblioteca.Data.Repositories;
+
 
 namespace GerenciamentoDeBiblioteca.Controllers
 {
@@ -31,16 +27,16 @@ namespace GerenciamentoDeBiblioteca.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllAuthors()
+        public IActionResult GetAllAutores()
         {
-            var autores = _autorRepository.GetAllAutores();
+            var autores = _autorRepository.GetAllAutor();
             var autorDTO = _mapper.Map<List<AutorDTO>>(autores);
 
             return Ok(autorDTO);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetAuthorById(int id)
+        public IActionResult GetAutorById(int id)
         {
             var autor = _autorRepository.GetAutorById(id);
 
@@ -55,18 +51,18 @@ namespace GerenciamentoDeBiblioteca.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateAuthor(AutorViewModel autorViewModel)
+        public IActionResult CreateAutor(AutorViewModel autorViewModel)
         {
             var autor = _mapper.Map<Autor>(autorViewModel);
             _autorRepository.AddAutor(autor);
 
             var autorDTO = _mapper.Map<AutorDTO>(autor);
 
-            return CreatedAtAction(nameof(GetAuthorById), new { id = autorDTO.Id }, autorDTO);
+            return CreatedAtAction(nameof(GetAutorById), new { id = autorDTO.Id }, autorDTO);
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateAuthor(int id, AutorViewModel autorViewModel)
+        public IActionResult UpdateAutor(int id, AutorViewModel autorViewModel)
         {
             if (!ModelState.IsValid)
             {

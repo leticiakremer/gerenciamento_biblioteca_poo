@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using GerenciamentoDeBiblioteca.Domain.Entities;
@@ -29,7 +25,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllBooks()
+        public IActionResult GetAllLivros()
         {
             var livros = _livroRepository.GetAllLivros();
             var livroDTO = _mapper.Map<List<LivroDTO>>(livros);
@@ -38,9 +34,9 @@ namespace GerenciamentoDeBiblioteca.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetBookById(int id)
+        public IActionResult GetLivroById(int id)
         {
-            var livro = _livroRepository.GetBookById(id);
+            var livro = _livroRepository.GetLivroById(id);
 
             if (livro == null)
             {
@@ -53,7 +49,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddBook(LivroViewModel livroViewModel)
+        public IActionResult AddLivro(LivroViewModel livroViewModel)
         {
             var livro = _mapper.Map < Livro(livroViewModel);
 
@@ -66,15 +62,15 @@ namespace GerenciamentoDeBiblioteca.Controllers
                     autor = new Autor { Id = autorId };
                     _autorRepository.AddAutor(autor);
 
-                    // Crie um objeto AuthorBook e atribua os valores apropriados
+                    // Crie um objeto AutorLivro e atribua os valores apropriados
                     var autorLivro = new AutorLivro
                     {
                         LivroId = livro.Id,
                         AutorId = autor.Id
                     };
 
-                    // Adicione o objeto AuthorBook ao repositório IAuthorBookRepository
-                    _autorLivroRepository.AddAuthor(autor);
+                    // Adicione o objeto AutorLivro repositório IAutorLivroRepository
+                    _autorLivroRepository.AddAutor(autor);
                 }
             }
 
@@ -82,7 +78,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
 
             var livroDTO = _mapper.Map<LivroDTO>(livro);
 
-            return CreatedAtAction(nameof(GetBookById), new { id = livroDTO.Id }, livroDTO);
+            return CreatedAtAction(nameof(GetLivroById), new { id = livroDTO.Id }, livroDTO);
         }
 
         [HttpPut("{id}")]
@@ -93,7 +89,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
                 return BadRequest();
             }
 
-            var livro = _livroRepository.GetBookById(id);
+            var livro = _livroRepository.GetLivroById(id);
 
             if (livro == null)
             {
@@ -111,9 +107,9 @@ namespace GerenciamentoDeBiblioteca.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteBook(int id)
+        public IActionResult DeleteLivro(int id)
         {
-            var livro = _livroRepository.GetBookById(id);
+            var livro = _livroRepository.GetLivroById(id);
 
             if (livro == null)
             {

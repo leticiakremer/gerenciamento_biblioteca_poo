@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GerenciamentoDeBiblioteca.Domain.Entities;
+using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace GerenciamentoDeBiblioteca.Data.Repositories
 {
-    public class LivroRepository
+    public class LivroRepository : ILivroRepository
     {
         private readonly DbContext _context;
 
