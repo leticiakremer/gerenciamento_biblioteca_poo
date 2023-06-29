@@ -5,16 +5,17 @@ using System.Threading.Tasks;
 using GerenciamentoDeBiblioteca.Domain.Entities;
 using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using GerenciamentoDeBiblioteca.Data.Context;
 
 namespace GerenciamentoDeBiblioteca.Data.Repositories
 {
     public class LivroRepository : ILivroRepository
     {
-        private readonly DbContext _context;
+        private readonly DataContext _context;
 
-        public LivroRepository(DbContext dbContext)
+        public LivroRepository(DataContext context)
         {
-            _context = dbContext;
+            _context = context;
         }
 
         public void AddLivro(Livro livro)

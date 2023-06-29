@@ -10,9 +10,9 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
 {
     public class AutorRepository : IAutorRepository
     {
-        private readonly DbContext _context;
+        private readonly DataContext _context;
 
-        public AutorRepository(DbContext context)
+        public AutorRepository(DataContext context)
         {
             _context = context;
         }

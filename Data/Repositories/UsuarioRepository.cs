@@ -2,14 +2,14 @@
 using GerenciamentoDeBiblioteca.Domain.Entities;
 using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
-
+using GerenciamentoDeBiblioteca.Data.Context;
 namespace GerenciamentoDeBiblioteca.Data.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private readonly DbContext _context;
+        private readonly DataContext _context;
 
-        public UsuarioRepository(DbContext context)
+        public UsuarioRepository(DataContext context)
         {
             _context = context;
         }
