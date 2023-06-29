@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zYQUPXrETcO59MzHw5Hp91ADlqgt6WfKQdT6tFApHTRMQ7kDAcd0NHLWvvamDRcYm2VijWZ7fvY9u/C5AtOXdg==",
+  "dgSpecHash": "DHJGLi+itbS07wqhAepQH9LzJM8cb3B01QS421R8KbvhYZDMVrFxADCx5QSfrzlJs6ItYVfWdGAEtSkaL8QIbA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
+  "projectFilePath": "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nessa\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\nessa\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

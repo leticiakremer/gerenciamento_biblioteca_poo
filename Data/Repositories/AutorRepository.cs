@@ -17,37 +17,34 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
             _context = context;
         }
 
-        public IList<Autor> GetAllAutores()
-        {
-            return _context.Autores.ToList();
-        }
+
 
         public Autor GetAutorById(int id)
         {
-            return _context.Autores.Find(id);
+            return _context.Autor.Find(id);
         }
 
         public void AddAutor(Autor autor)
         {
-            _context.Autores.Add(autor);
+            _context.Autor.Add(autor);
             _context.SaveChanges();
         }
 
         public void UpdateAutor(Autor autor)
         {
-            _context.Autores.Update(autor);
+            _context.Autor.Update(autor);
             _context.SaveChanges();
         }
 
         public void DeleteAutor(Autor autor)
         {
-            _context.Autores.Remove(autor);
+            _context.Autor.Remove(autor);
             _context.SaveChanges();
         }
 
         public IList<Autor> GetAllAutor()
         {
-            throw new NotImplementedException();
+
         }
     }
 }

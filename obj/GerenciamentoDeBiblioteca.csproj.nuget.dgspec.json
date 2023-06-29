@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj": {}
+    "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj": {
+    "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
+        "projectUniqueName": "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
         "projectName": "GerenciamentoDeBiblioteca",
-        "projectPath": "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
+        "projectPath": "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
         "packagesPath": "C:\\Users\\nessa\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\obj\\",
+        "outputPath": "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

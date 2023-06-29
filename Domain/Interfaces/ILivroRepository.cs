@@ -11,6 +11,7 @@ namespace GerenciamentoDeBiblioteca.Domain.Interfaces
     {
         IList<Livro> GetAllLivros();
         Livro GetLivrosById(int id);
+
         void AddLivro(Livro livro);
         void UpdateLivro(Livro livro);
         void DeleteLivro(Livro livro);
