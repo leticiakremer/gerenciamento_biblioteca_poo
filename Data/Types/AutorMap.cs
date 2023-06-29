@@ -18,7 +18,7 @@ namespace GerenciamentoDeBiblioteca.Data.Types
             builder.Property(i => i.Id)
                 .HasColumnName("id");
 
-            builder.HasKey(i => i.Livros);
+
 
             builder.Property(i => i.Nome).HasColumnName("nome");
             builder.Property(i => i.Nome).IsRequired();

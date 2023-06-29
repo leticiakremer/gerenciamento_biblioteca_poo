@@ -12,5 +12,7 @@ namespace GerenciamentoDeBiblioteca.Domain.Entities
 
         public int LivroId { get; set; }
         public Livro Livro { get; set; }
+
+
     }
 }
