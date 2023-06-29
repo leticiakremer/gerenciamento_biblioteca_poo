@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GerenciamentoDeBiblioteca.Domain.Entities;
 using GerenciamentoDeBiblioteca.Domain.Interfaces;
+using GerenciamentoDeBiblioteca.Domain.DTOs;
+using GerenciamentoDeBiblioteca.Domain.ViewModels;
+using AutoMapper;
 
 namespace GerenciamentoDeBiblioteca.Controllers
 {
