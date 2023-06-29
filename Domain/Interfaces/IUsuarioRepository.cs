@@ -6,10 +6,10 @@ using GerenciamentoDeBiblioteca.Domain.Entities;
 
 namespace GerenciamentoDeBiblioteca.Domain.Interfaces
 {
-    public class IUsuarioRepository
+    public interface IUsuarioRepository
     {
-        IList<Usuario> GetAllUsers();
-        Usuario GetUserById(int id);
+        IList<Usuario> GetAllUsuario();
+        Usuario GetUsuarioById(int id);
         void AddUsuario(Usuario user);
         void UpdateUsuario(Usuario user);
         void DeleteUsuario(Usuario user);

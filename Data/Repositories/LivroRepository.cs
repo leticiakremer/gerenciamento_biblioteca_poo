@@ -23,9 +23,29 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
             _context.SaveChanges();
         }
 
+        public void DeleteLivro(Livro livro)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<Livro> GetAllLivros()
+        {
+            throw new NotImplementedException();
+        }
+
         public Livro GetLivroById(int livroId)
         {
             return _context.Set<Livro>().Find(livroId);
+        }
+
+        public Livro GetLivrosById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateLivro(Livro livro)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GerenciamentoDeBiblioteca.Data.Context;
+
 using GerenciamentoDeBiblioteca.Domain.Entities;
 using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -46,6 +42,11 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
         {
             _context.Autores.Remove(autor);
             _context.SaveChanges();
+        }
+
+        public IList<Autor> GetAllAutor()
+        {
+            throw new NotImplementedException();
         }
     }
 }

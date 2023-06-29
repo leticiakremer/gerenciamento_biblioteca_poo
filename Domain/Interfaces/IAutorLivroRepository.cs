@@ -6,7 +6,7 @@ using GerenciamentoDeBiblioteca.Domain.Entities;
 
 namespace GerenciamentoDeBiblioteca.Domain.Interfaces
 {
-    public class IAutorLivroRepository
+    public interface IAutorLivroRepository
     {
         void AddAutor(Autor autor);
         void AddLivro(Livro Livro);

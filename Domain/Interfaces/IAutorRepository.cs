@@ -7,7 +7,7 @@ using GerenciamentoDeBiblioteca.Domain.Entities;
 
 namespace GerenciamentoDeBiblioteca.Domain.Interfaces
 {
-    public class IAutorRepository
+    public interface IAutorRepository
     {
         IList<Autor> GetAllAutor();
         Autor GetAutorById(int id);

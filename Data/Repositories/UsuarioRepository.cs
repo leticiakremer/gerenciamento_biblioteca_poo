@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using GerenciamentoDeBiblioteca.Domain.Entities;
 using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -23,9 +20,24 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
             _context.SaveChanges();
         }
 
+        public void DeleteUsuario(Usuario user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<Usuario> GetAllUsuario()
+        {
+            throw new NotImplementedException();
+        }
+
         public Usuario GetUsuarioById(int usuarioId)
         {
             return _context.Set<Usuario>().Find(usuarioId);
+        }
+
+        public void UpdateUsuario(Usuario user)
+        {
+            throw new NotImplementedException();
         }
     }
 }

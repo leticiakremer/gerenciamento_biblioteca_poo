@@ -7,9 +7,9 @@ using GerenciamentoDeBiblioteca.Domain.Interfaces;
 
 namespace GerenciamentoDeBiblioteca.Domain.Interfaces
 {
-    public class ILivroRepository
+    public interface ILivroRepository
     {
-        IList<Livro> GetAllLivross();
+        IList<Livro> GetAllLivros();
         Livro GetLivrosById(int id);
         void AddLivro(Livro livro);
         void UpdateLivro(Livro livro);
