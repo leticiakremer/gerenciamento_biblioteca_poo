@@ -1,6 +1,6 @@
 using GerenciamentoDeBiblioteca;
 
-namespace LibraryManagementAPI
+namespace GerenciamentoDeBiblioteca
 {
     public class Program
     {

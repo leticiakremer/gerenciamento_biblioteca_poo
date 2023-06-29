@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj": {}
+    "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj": {
+    "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
+        "projectUniqueName": "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
         "projectName": "GerenciamentoDeBiblioteca",
-        "projectPath": "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
+        "projectPath": "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\GerenciamentoDeBiblioteca.csproj",
         "packagesPath": "C:\\Users\\nessa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\obj\\",
+        "outputPath": "c:\\Users\\ASPOO\\GerenciamentoDeBiblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore": {
               "target": "Package",
               "version": "[2.2.0, )"

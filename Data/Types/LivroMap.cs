@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace GerenciamentoDeBiblioteca.Data.Types
 {
-    public class LivroMap : IEntityTypeConfiguration<LivroMap>
+    public class LivroMap : IEntityTypeConfiguration<Livro>
     {
         public void Configure(EntityTypeBuilder<Livro> builder)
         {
