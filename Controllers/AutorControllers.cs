@@ -22,11 +22,11 @@ namespace GerenciamentoDeBiblioteca.Controllers
         private readonly IAutorLivroRepository _autorLivroRepository;
         private readonly IMapper _mapper;
 
-        public AutorControllers(Domain.Interfaces.IAutorRepository authorRepository, ILivroRepository bookRepository, IAutorLivroRepository authorBookRepository, IMapper mapper)
+        public AutorControllers(IAutorRepository autorRepository, ILivroRepository livroRepository, IAutorLivroRepository autorLivroRepository, IMapper mapper)
         {
             _autorRepository = autorRepository;
             _livroRepository = livroRepository;
-            _autorLivroRepository = autorBookRepository;
+            _autorLivroRepository = autorLivroRepository;
             _mapper = mapper;
         }
 
