@@ -27,6 +27,7 @@ namespace GerenciamentoDeBiblioteca.Data.Types
             builder.HasOne(i => i.Livro)
                 .WithMany(i => i.Autores)
                 .HasForeignKey(i => i.LivroId);
+
         }
     }
 }

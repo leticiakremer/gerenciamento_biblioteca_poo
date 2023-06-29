@@ -15,6 +15,7 @@ namespace GerenciamentoDeBiblioteca.Data.Context
         public DbSet<Livro> Livros { get; set; }
         public DbSet<Autor> Autores { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<AutorLivro> AutorLivros { get; set; }
 
 
 
@@ -28,7 +29,7 @@ namespace GerenciamentoDeBiblioteca.Data.Context
             modelBuilder.ApplyConfiguration(new LivroMap());
             modelBuilder.ApplyConfiguration(new AutorLivroMap());
 
-
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

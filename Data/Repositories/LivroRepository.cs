@@ -31,7 +31,7 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
 
         public IList<Livro> GetAllLivros()
         {
-            throw new NotImplementedException();
+            return _context.Set<Livro>().ToList();
         }
 
         public Livro GetLivrosById(int id)

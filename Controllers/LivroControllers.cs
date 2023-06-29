@@ -37,7 +37,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
         [HttpGet("{id}")]
         public IActionResult GetLivroById(int id)
         {
-            var livro = _livroRepository.GetLivroById(id);
+            var livro = _livroRepository.GetLivrosById(id);
 
             if (livro == null)
             {
@@ -90,7 +90,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
                 return BadRequest();
             }
 
-            var livro = _livroRepository.GetLivroById(id);
+            var livro = _livroRepository.GetLivrosById(id);
 
             if (livro == null)
             {
@@ -110,7 +110,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteLivro(int id)
         {
-            var livro = _livroRepository.GetLivroById(id);
+            var livro = _livroRepository.GetLivrosById(id);
 
             if (livro == null)
             {
