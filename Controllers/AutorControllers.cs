@@ -8,6 +8,7 @@ using GerenciamentoDeBiblioteca.Domain.Interfaces;
 using GerenciamentoDeBiblioteca.Domain.DTOs;
 using GerenciamentoDeBiblioteca.Domain.ViewModels;
 using AutoMapper;
+using GerenciamentoDeBiblioteca.Data.Repositories;
 
 namespace GerenciamentoDeBiblioteca.Controllers
 {
