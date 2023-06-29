@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
 using GerenciamentoDeBiblioteca.Domain.Entities;
 using GerenciamentoDeBiblioteca.Domain.Interfaces;
+using GerenciamentoDeBiblioteca.Domain.DTOs;
+using GerenciamentoDeBiblioteca.Domain.ViewModels;
 
 namespace GerenciamentoDeBiblioteca.Controllers
 {
@@ -55,7 +58,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
                     return BadRequest();
                 }
 
-                var usuario = _mapper.Map<User>(usuarioViewModel);
+                var usuario = _mapper.Map<Usuario>(usuarioViewModel);
                 _usuariorRepository.AddUsuario(usuario);
 
                 var usuarioDTO = _mapper.Map<UsuarioDTO>(usuario);
