@@ -9,8 +9,8 @@ namespace GerenciamentoDeBiblioteca.Domain.Interfaces
 {
     public class ILivroRepository
     {
-        IList<Book> GetAllBooks();
-        Book GetBookById(int id);
+        IList<Livro> GetAllLivross();
+        Livro GetLivrosById(int id);
         void AddLivro(Livro livro);
         void UpdateLivro(Livro livro);
         void DeleteLivro(Livro livro);

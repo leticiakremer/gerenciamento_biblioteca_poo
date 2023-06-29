@@ -20,12 +20,12 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
             _context = context;
         }
 
-        public IList<Autor> GetAllAuthors()
+        public IList<Autor> GetAllAutores()
         {
             return _context.Autores.ToList();
         }
 
-        public Autor GetAuthorById(int id)
+        public Autor GetAutorById(int id)
         {
             return _context.Autores.Find(id);
         }

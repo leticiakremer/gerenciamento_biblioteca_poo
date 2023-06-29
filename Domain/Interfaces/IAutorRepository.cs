@@ -9,8 +9,8 @@ namespace GerenciamentoDeBiblioteca.Domain.Interfaces
 {
     public class IAutorRepository
     {
-        IList<Autor> GetAllAuthors();
-        Autor GetAuthorById(int id);
+        IList<Autor> GetAllAutor();
+        Autor GetAutorById(int id);
         void AddAutor(Autor autor);
         void UpdateAutor(Autor autor);
         void DeleteAutor(Autor autor);
