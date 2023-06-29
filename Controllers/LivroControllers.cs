@@ -51,7 +51,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
         [HttpPost]
         public IActionResult AddLivro(LivroViewModel livroViewModel)
         {
-            var livro = _mapper.Map < Livro(livroViewModel);
+            var livro = _mapper.Map<Livro>(livroViewModel);
 
             // Adiciona o autor ao livro
             foreach (var autorId in livroViewModel.AutoresId)

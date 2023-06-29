@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using GerenciamentoDeBiblioteca.Domain.Entities;
@@ -11,96 +7,95 @@ using GerenciamentoDeBiblioteca.Domain.ViewModels;
 
 namespace GerenciamentoDeBiblioteca.Controllers
 {
-    public class UsuarioControllers
+    [ApiController]
+    [Route("api/usuarios")]
+    public class UsuarioControllers : ControllerBase
     {
-        [ApiController]
-        [Route("api/users")]
-        public class UserController : ControllerBase
+
+
+        private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IMapper _mapper;
+
+        public UsuarioControllers(IUsuarioRepository usuarioRepository, IMapper mapper)
         {
-            private readonly IUsuarioRepository _usuarioRepository;
-            private readonly IMapper _mapper;
+            _usuarioRepository = usuarioRepository;
+            _mapper = mapper;
+        }
 
-            public UserController(IUsuarioRepository usuarioRepository, IMapper mapper)
+        [HttpGet]
+        public IActionResult GetAllUsers()
+        {
+            var usuario = _usuarioRepository.GetAllUsuario();
+            var usuarioDTOs = _mapper.Map<List<UsuarioDTO>>(usuario);
+
+            return Ok();
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetUserById(int id)
+        {
+            var usuario = _usuarioRepository.GetUsuarioById(id);
+
+            if (usuario == null)
             {
-                _usuariorRepository = usuarioRepository;
-                _mapper = mapper;
+                return NotFound();
             }
 
-            [HttpGet]
-            public IActionResult GetAllUsers()
-            {
-                var usuarios = _usuariorRepository.GetAllUsers();
-                var usuarioDTOs = _mapper.Map<List<UsuarioDTO>>(usuarios);
+            var usuarioDTO = _mapper.Map<UsuarioDTO>(usuario);
 
-                return Ok();
+            return Ok();
+        }
+
+        [HttpPost]
+        public IActionResult CreateUser(UsuarioViewModel usuarioViewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
             }
 
-            [HttpGet("{id}")]
-            public IActionResult GetUserById(int id)
+            var usuario = _mapper.Map<Usuario>(usuarioViewModel);
+            _usuarioRepository.AddUsuario(usuario);
+
+            var usuarioDTO = _mapper.Map<UsuarioDTO>(usuario);
+
+            return CreatedAtAction(nameof(GetUserById), new { id = usuarioDTO.Id }, usuarioDTO);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateUser(int id, UsuarioViewModel usuarioViewModel)
+        {
+            if (!ModelState.IsValid)
             {
-                var usuario = _usuariorRepository.GetUserById(id);
-
-                if (usuario == null)
-                {
-                    return NotFound();
-                }
-
-                var usuarioDTO = _mapper.Map<UsuarioDTO>(usuario);
-
-                return Ok();
+                return BadRequest();
             }
 
-            [HttpPost]
-            public IActionResult CreateUser(UsuariorViewModel usuarioViewModel)
+            var usuario = _usuarioRepository.GetUsuarioById(id);
+
+            if (usuario == null)
             {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest();
-                }
-
-                var usuario = _mapper.Map<Usuario>(usuarioViewModel);
-                _usuariorRepository.AddUsuario(usuario);
-
-                var usuarioDTO = _mapper.Map<UsuarioDTO>(usuario);
-
-                return CreatedAtAction(nameof(GetUserById), new { id = usuarioDTO.Id }, usuarioDTO);
+                return NotFound();
             }
 
-            [HttpPut("{id}")]
-            public IActionResult UpdateUser(int id, UserViewModel userViewModel)
+            _mapper.Map(usuarioViewModel, usuario);
+            _usuarioRepository.UpdateUsuario(usuario);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteUsuario(int id)
+        {
+            var usuario = _usuarioRepository.GetUsuarioById(id);
+
+            if (usuario == null)
             {
-                if (!ModelState.IsValid)
-                {
-                    return BadRequest();
-                }
-
-                var usuario = _usuariorRepository.GetUserById(id);
-
-                if (usuario == null)
-                {
-                    return NotFound();
-                }
-
-                _mapper.Map(userViewModel, usuario);
-                _usuariorRepository.UpdateUser(usuario);
-
-                return NoContent();
+                return NotFound();
             }
 
-            [HttpDelete("{id}")]
-            public IActionResult DeleteUsuario(int id)
-            {
-                var usuario = _usuariorRepository.GetUserById(id);
+            _usuarioRepository.DeleteUsuario(usuario);
 
-                if (usuario == null)
-                {
-                    return NotFound();
-                }
-
-                _usuariorRepository.DeleteUsuario(usuario);
-
-                return NoContent();
-            }
+            return NoContent();
         }
     }
 }
