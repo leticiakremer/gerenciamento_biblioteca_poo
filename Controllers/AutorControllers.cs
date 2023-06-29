@@ -16,9 +16,9 @@ namespace GerenciamentoDeBiblioteca.Controllers
     public class AutorControllers : ControllerBase
 
     {
-        private readonly IAutorRepository _authorRepository;
-        private readonly ILivroRepository _bookRepository;
-        private readonly IAutorLivroRepository _authorBookRepository;
+        private readonly IAutorRepository _autorRepository;
+        private readonly ILivroRepository _livroRepository;
+        private readonly IAutorLivroRepository _autorLivroRepository;
         private readonly IMapper _mapper;
 
         public AutorControllers(Domain.Interfaces.IAutorRepository authorRepository, ILivroRepository bookRepository, IAutorLivroRepository authorBookRepository, IMapper mapper)
