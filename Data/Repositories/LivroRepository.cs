@@ -25,7 +25,8 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
 
         public void DeleteLivro(Livro livro)
         {
-            throw new NotImplementedException();
+            _context.Set<Livro>().Remove(livro);
+            _context.SaveChanges();
         }
 
         public IList<Livro> GetAllLivros()
@@ -33,19 +34,15 @@ namespace GerenciamentoDeBiblioteca.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public Livro GetLivroById(int livroId)
-        {
-            return _context.Set<Livro>().Find(livroId);
-        }
-
         public Livro GetLivrosById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Set<Livro>().Find(id);
         }
 
         public void UpdateLivro(Livro livro)
         {
-            throw new NotImplementedException();
+            _context.Set<Livro>().Update(livro);
+            _context.SaveChanges(); ;
         }
     }
 }
