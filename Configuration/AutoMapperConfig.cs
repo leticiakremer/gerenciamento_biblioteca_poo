@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using GerenciamentoDeBiblioteca.Domain.Entities;
+using GerenciamentoDeBiblioteca.Domain.DTOs;
+using GerenciamentoDeBiblioteca.Domain.ViewModels;
 
 
 
