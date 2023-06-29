@@ -18,7 +18,7 @@ namespace GerenciamentoDeBiblioteca.Controllers
         private readonly IAutorLivroRepository _authorBookRepository;
         private readonly IMapper _mapper;
 
-        public AutorControllrs(Domain.Interfaces.IAutorRepository authorRepository, ILivroRepository bookRepository, IAutorLivroRepository authorBookRepository, IMapper mapper)
+        public AutorControllers(Domain.Interfaces.IAutorRepository authorRepository, ILivroRepository bookRepository, IAutorLivroRepository authorBookRepository, IMapper mapper)
         {
             _autorRepository = autorRepository;
             _livroRepository = livroRepository;

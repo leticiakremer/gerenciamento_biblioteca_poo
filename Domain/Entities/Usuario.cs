@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GerenciamentoDeBiblioteca.Domain.Entities
 {
-    public class Usuario
+    public class Usuario : Entity
     {
         public string Nome { get; set; }
 
